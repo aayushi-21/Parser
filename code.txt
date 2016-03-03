@@ -1,0 +1,12 @@
+start: MVI A 0000h
+MVI RA 0005h
+CMP RA
+GZ loopi
+MVI RB 01h
+loop: PRINT 01h
+MOV RC A
+ADD A A RB
+MOV RA RC
+DCR RA
+GNZ loop
+loopi: END
